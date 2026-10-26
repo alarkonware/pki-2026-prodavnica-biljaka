@@ -4,7 +4,7 @@ Ispitni projekat iz predmeta Programiranje korisničkih interfejsa: prototip pro
 
 Vue 3 + TypeScript + Vue Router + Bootstrap (CDN) + SweetAlert2. Nema backend-a, podaci se čuvaju u `localStorage`.
 
-Aplikacija omogućava pretragu i rezervaciju biljaka, ocenjivanje, profil korisnika i chat agenta.
+Aplikacija omogućava pretragu i rezervaciju biljaka, ocenjivanje pristiglih biljaka, izmenu korisničkog profila i razgovor sa chat agentom koji odgovara na najčešća pitanja.
 
 ## Pokretanje
 
