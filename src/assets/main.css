@@ -1,0 +1,948 @@
+@import './base.css';
+
+/* ---------- Boja dugmadi (Rezerviši, Detalji, Pretraži...) ---------- */
+.btn-success {
+  --bs-btn-bg: var(--app-green);
+  --bs-btn-border-color: var(--app-green);
+  --bs-btn-hover-bg: var(--app-green-dark);
+  --bs-btn-hover-border-color: var(--app-green-dark);
+  --bs-btn-active-bg: var(--app-green-dark);
+  --bs-btn-active-border-color: var(--app-green-dark);
+}
+
+.btn-outline-success {
+  --bs-btn-color: var(--app-green-dark);
+  --bs-btn-border-color: var(--app-green);
+  --bs-btn-hover-bg: var(--app-green);
+  --bs-btn-hover-border-color: var(--app-green);
+  --bs-btn-active-bg: var(--app-green-dark);
+  --bs-btn-active-border-color: var(--app-green-dark);
+}
+
+/* ---------- Navigacija ---------- */
+.app-navbar {
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+.app-navbar .navbar-brand {
+  font-weight: 700;
+  color: var(--app-green-dark);
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 0.35rem;
+  border-radius: 50%;
+  background: var(--app-green);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.app-navbar .nav-link {
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.6rem;
+  color: var(--app-text);
+}
+
+.app-navbar .nav-link:hover {
+  background: var(--app-green-soft);
+}
+
+.app-navbar .nav-link.active {
+  background: var(--app-green-soft);
+  color: var(--app-green-dark);
+  font-weight: 600;
+}
+
+.app-navbar .dropdown-menu {
+  border: 0;
+  border-radius: 0.8rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Kartice ---------- */
+.card {
+  border: 0;
+  border-radius: var(--app-radius);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  background: transparent;
+  font-weight: 600;
+}
+
+.plant-card {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.plant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.plant-img {
+  height: 190px;
+  object-fit: cover;
+  border-radius: var(--app-radius) var(--app-radius) 0 0;
+}
+
+.plant-img-big {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: var(--app-radius);
+}
+
+.order-thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+}
+
+.quantity-input {
+  width: 90px;
+}
+
+.page-title {
+  font-weight: 700;
+  color: var(--app-green-dark);
+}
+
+/* ---------- HomeView hero sekcija: blok na vrhu stranice sa pozdravom i kategorijama ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 2.5rem;
+  border-radius: 1.4rem;
+  color: #fff;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.2), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.14), transparent 45%),
+    linear-gradient(135deg, #b5502e, #c4603d 55%, #dc8a63);
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero-text {
+  max-width: 620px;
+}
+
+.hero-leaf {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.13);
+  pointer-events: none;
+}
+
+.hero-leaf-1 {
+  right: -2rem;
+  top: -2.5rem;
+  font-size: 14rem;
+  transform: rotate(20deg);
+}
+
+.hero-leaf-2 {
+  right: 9rem;
+  bottom: -2rem;
+  font-size: 7rem;
+  transform: rotate(-35deg);
+}
+
+/* ---------- Pocetna: kategorije (dugmici u hero sekciji) ---------- */
+.category-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.category-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.category-btn.active {
+  background: #fff;
+  border-color: #fff;
+  color: var(--app-green-dark);
+}
+
+/* ---------- Pocetna: koraci rezervacije ---------- */
+.step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--app-green);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Footer ---------- */
+.app-footer {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  background: #3d2318;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.app-footer h6 {
+  color: #fff;
+  font-weight: 700;
+}
+
+.app-footer a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ---------- Navbar: korisnik ---------- */
+.nav-user {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: var(--app-green);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-user:hover {
+  background: var(--app-green-dark);
+  color: #fff;
+}
+
+/* ---------- Kartica biljke (horizontalna) ---------- */
+.plant-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--app-border);
+  border-radius: 1.1rem;
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+
+.plant-row:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.plant-row-img {
+  position: relative;
+  background: #f4e9e1;
+  min-height: 210px;
+}
+
+.plant-row-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plant-row-rate {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.plant-row-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem 1rem;
+}
+
+.plant-row-bottom {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--app-border);
+}
+
+.plant-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--app-green-dark);
+}
+
+.chip {
+  display: inline-block;
+  margin: 0 0.3rem 0.3rem 0;
+  padding: 0.05rem 0.6rem;
+  border-radius: 0.4rem;
+  background: #f8ebe3;
+  color: var(--app-green-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* ---------- Pretraga: bocni filteri ---------- */
+.shop-layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.filter-side {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--app-border);
+  border-radius: 1.1rem;
+}
+
+.filter-title {
+  padding: 0.9rem 1.1rem;
+  background: #f8ebe3;
+  color: var(--app-green-dark);
+  font-weight: 700;
+}
+
+.filter-actions {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid var(--app-border);
+}
+
+.filter-block {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid #f1e8e1;
+}
+
+.filter-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--app-muted);
+}
+
+.search-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.8rem;
+  border: 1px solid #d9c9bd;
+  border-radius: 999px;
+  background: #fff;
+  color: #8a7a70;
+}
+
+.search-pill input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--app-text);
+}
+
+.pill-btn {
+  margin: 0 0.3rem 0.35rem 0;
+  padding: 0.2rem 0.8rem;
+  border: 1.5px solid #d9c9bd;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.85rem;
+}
+
+.pill-btn.active {
+  background: var(--app-green);
+  border-color: var(--app-green);
+  color: #fff;
+}
+
+.star-pick {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #ded3cb;
+  background: none;
+  border: 0;
+  padding: 0 2px;
+}
+
+.star-pick.on {
+  color: #c98a00;
+}
+
+.active-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.4rem;
+  padding: 0.15rem 0.5rem 0.15rem 0.8rem;
+  border: 0;
+  border-radius: 999px;
+  background: #f8ebe3;
+  color: var(--app-green-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* ---------- Prazna stanja ---------- */
+.empty-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.7rem 1.5rem;
+  background: #fff;
+  border: 2px dashed #dccabe;
+  border-radius: 1.4rem;
+}
+
+.empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: #f8ebe3;
+  color: var(--app-green);
+  font-size: 2rem;
+}
+
+/* ---------- Okvir za naslov stranice (O nama, Profil, 404) ---------- */
+.green-box {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  border-radius: 1.1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #8f3c20, #b5502e 60%, #cf7653);
+}
+
+/* ---------- Prijava i registracija ---------- */
+.auth-box {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  max-width: 900px;
+  margin: 0.8rem auto 0;
+  background: #fff;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(60, 30, 20, 0.12);
+}
+
+.auth-side {
+  padding: 2.5rem 2rem;
+  color: #fff;
+  background: linear-gradient(160deg, #8f3c20, #b5502e 60%, #cf7653);
+}
+
+.auth-side li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.auth-side li i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+}
+
+.auth-form {
+  padding: 2.5rem 2.2rem;
+}
+
+/* ---------- Profil ---------- */
+.profile-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 2.5rem 1.2rem 1.4rem;
+  border-radius: 1.3rem;
+  color: #fff;
+  background: linear-gradient(135deg, #8f3c20, #b5502e 60%, #cf7653);
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--app-green-dark);
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--app-green-dark);
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--app-border);
+}
+
+.stat-row:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- Rezervacije ---------- */
+.res-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.7rem;
+  padding: 0.9rem 1.4rem;
+  background: #fff;
+  border: 1px solid var(--app-border);
+  border-radius: 1rem;
+}
+
+.res-summary b {
+  font-size: 1.5rem;
+  color: var(--app-green-dark);
+}
+
+.res-tabs {
+  display: flex;
+  gap: 0.2rem;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.res-tab {
+  margin-bottom: -1px;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: var(--app-muted);
+}
+
+.res-tab.active {
+  border-bottom-color: var(--app-green);
+  color: var(--app-green-dark);
+  font-weight: 700;
+}
+
+.res-item {
+  display: grid;
+  grid-template-columns: 76px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem 1.1rem;
+  background: #fff;
+  border: 1px solid var(--app-border);
+  border-radius: 1rem;
+}
+
+.res-item.faded {
+  opacity: 0.6;
+}
+
+.res-thumb {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  background: #f4e9e1;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+}
+
+.link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--app-muted);
+  text-decoration: underline;
+}
+
+.link-btn:hover {
+  color: #b3261e;
+}
+
+.res-total {
+  position: sticky;
+  top: 1rem;
+  padding: 1.2rem;
+  background: #fff;
+  border: 1px solid var(--app-border);
+  border-radius: 1.1rem;
+}
+
+/* ---------- O nama ---------- */
+.image-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 160px;
+  background: #f4e9e1;
+  /*border: 2px dashed #dccabe;*/
+  border-radius: 1.1rem;
+  color: #8a7a70;
+}
+
+.image-slot i {
+  font-size: 2rem;
+}
+
+.value-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.7rem;
+  border-radius: 0.9rem;
+  background: #f8ebe3;
+  color: var(--app-green);
+  font-size: 1.3rem;
+}
+
+.stat-number {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--app-green-dark);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 230px 230px;
+  gap: 0.9rem;
+}
+
+.gallery .image-slot:first-child {
+  grid-row: span 2;
+}
+
+.gallery .image-slot {
+  border: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.gallery .image-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #f4e9e1;
+}
+
+.avatar-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 0.8rem;
+  border: 2px dashed #dccabe;
+  border-radius: 50%;
+  background: #f4e9e1;
+  color: #8a7a70;
+  font-size: 0.75rem;
+}
+
+/* ---------- Detalji ---------- */
+.detail-img {
+  width: 100%;
+  max-height: none;
+}
+
+.detail-img img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 480px;
+  border-radius: 1.2rem;
+}
+
+.fact-box {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  height: 100%;
+  padding: 0.6rem 0.9rem;
+  background: #fff;
+  border: 1px solid var(--app-border);
+  border-radius: 0.9rem;
+}
+
+.fact-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 0.6rem;
+  background: #f8ebe3;
+  color: var(--app-green);
+}
+
+.review-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--app-green);
+  color: #fff;
+  font-weight: 700;
+}
+
+.review-bubble {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  background: #fff;
+  border: 1px solid var(--app-border);
+  border-radius: 4px 1.1rem 1.1rem 1.1rem;
+}
+
+/* ---------- Nova rezervacija ---------- */
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid #d9c9bd;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.qty-stepper button {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: #f8ebe3;
+  color: var(--app-green-dark);
+}
+
+.qty-stepper input {
+  width: 64px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.total-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  background: #f8ebe3;
+}
+
+/* ---------- 404 ---------- */
+.not-found-num {
+  font-size: 6.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* ---------- Chat pomocnik ---------- */
+.chat-widget {
+  z-index: 1050;
+}
+
+.chat-window {
+  width: 320px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(60, 30, 20, 0.28);
+}
+
+.chat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.9rem 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #8f3c20, #c4603d);
+}
+
+.chat-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.chat-body {
+  height: 290px;
+  overflow-y: auto;
+  padding: 0.9rem;
+  background: #fcf6f1;
+}
+
+.chat-msg {
+  display: inline-block;
+  max-width: 235px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.chat-msg.bot {
+  background: #fff;
+  border: 1px solid #efe3da;
+  border-radius: 1rem 1rem 1rem 4px;
+}
+
+.chat-msg.me {
+  background: var(--app-green);
+  color: #fff;
+  border-radius: 1rem 1rem 4px 1rem;
+}
+
+.chat-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem 0.9rem;
+  background: #fff;
+  border-top: 1px solid #efe3da;
+}
+
+.chat-choice {
+  padding: 0.25rem 0.8rem;
+  border: 0;
+  border-radius: 999px;
+  background: #f8ebe3;
+  color: var(--app-green-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.chat-choice:hover {
+  background: #f3dccf;
+}
+
+@media (max-width: 900px) {
+  .shop-layout,
+  .auth-box {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-side {
+    position: static;
+  }
+
+  .plant-row {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .res-item {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+} 
+
+/* ---------- Pitanja i odgovori ---------- */
+.faq-wrap {
+  max-width: 760px;
+  margin: 1rem auto 0;
+}
+
+.faq-item {
+  border: 1px solid var(--app-border) !important;
+  border-radius: var(--app-radius) !important;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq-item .accordion-button {
+  font-weight: 600;
+  color: var(--app-text);
+  background: #fff;
+  box-shadow: none;
+}
+
+.faq-item .accordion-button:not(.collapsed) {
+  color: var(--app-green-dark);
+  background: #f8ebe3;
+}
+
+.faq-item .accordion-button i {
+  color: var(--app-green);
+}
+
+.faq-item .accordion-body {
+  color: var(--app-muted);
+}
+
+
+

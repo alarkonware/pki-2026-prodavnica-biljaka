@@ -1,0 +1,29 @@
+/* Osnovne promenljive i podesavanja za celu aplikaciju 
+  Boje aplikacije i zaobljenost uglova kartica;*/
+:root {
+  --app-green: #b5502e;
+  --app-green-dark: #8f3c20;
+  --app-green-soft: rgba(181, 80, 46, 0.14);
+  --app-border: #eadfd6;
+  --app-muted: #6b5f58;
+  --app-text: #3a2e28;
+  --app-bg: #fbf6f1;
+  --app-radius: 0.9rem;
+
+/* Bootstrap-ovu zelenu boju (success) i boju linkova menjam terakota bojom (#b5502e) */
+  --bs-success: #b5502e;
+  --bs-success-rgb: 181, 80, 46;
+  --bs-link-color: #b5502e;
+  --bs-link-hover-color: #8f3c20;
+}
+
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
